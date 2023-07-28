@@ -1,27 +1,104 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  color:white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.home {
+  background-image: url(../../public/assets/home/background-home-desktop.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 96px;
+  margin-top: 30px;
+}
+
+.nav-logo {
+  position: absolute;
+  margin-left: 30px;
+}
+
+.nav-links {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 830px;
+  height: 96px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.linha {
+  display: flex;
+  width: 28vw;
+  position: absolute;
+  top: 41%;
+  left: -26vw;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  width: 100%;
+  margin-left: 50px;
+  background: gray;
+}
+
+.destination {
+  background-image: url(../../public/assets/destination/background-destination-desktop.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.dest-name {
+  display: flex;
+  margin: 20px;
+}
+
+.select-name {
+  font-size: 30px;
+  margin: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
+}
+
+.select-name.selected {
+  border-bottom-color: white;
+}
+
+.dest-planet {
+  display: flex;
+  align-items: center;
+  margin: 50px;
+}
+
+.dest-info {
+  margin: 20px;
 }
