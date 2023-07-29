@@ -31,12 +31,16 @@ const filteredDestinations = selectedDestination
         <section>
           {filteredDestinations.map((destination) => (
             <div key={destination.name} className="dest-planet" onClick={() => handleClick(destination.name)}>
-              <Image src={`${basePath}/${destination.images.png}`} alt={destination.name} width={445} height={445} />
+              <div>
+                <Image src={`${basePath}/${destination.images.png}`} alt={destination.name} width={445} height={445} />
+              </div>
               <div className="dest-info">
-              <h2>{destination.name}</h2>
-              <p>{destination.description}</p>
-              <p>{ destination.distance }</p>
-              <p>{ destination.travel }</p>
+                <h2>{destination.name}</h2>
+                <p>{destination.description}</p>
+                <div>
+                <p>{ destination.distance }</p>
+                <p>{ destination.travel }</p>
+                </div>
               </div>
             </div>
           ))}

@@ -20,6 +20,27 @@ a {
   height: 100vh;
 }
 
+.home-hero {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  margin: 100px;
+}
+
+.home-info {
+  width: 450px;
+  height: 382px;
+}
+
+.home-btn {
+  width: 274px;
+  height: 274px;
+  border-radius: 100%;
+  margin: 100px;
+  margin-top: 200px;
+  margin-left: 400px;
+}
+
 .nav {
   position: relative;
   display: flex;
@@ -79,6 +100,7 @@ hr {
 
 .dest-name {
   display: flex;
+  justify-content: end;
   margin: 20px;
 }
 
@@ -101,4 +123,34 @@ hr {
 
 .dest-info {
   margin: 20px;
+  width: 445px;
+  height: 472px;
+}
+
+.crew-main {
+  background-image: url(../../public/assets/crew/background-crew-desktop.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.crew {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
+.crew-name {
+  display: flex;;
+  margin: 20px;
+}
+
+.card-crew {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin: 20px;
+  width: 445px;
+  height: 472px;
 }
